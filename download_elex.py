@@ -17,6 +17,7 @@ db_string="postgresql+psycopg2://"+database_user+":"+database_pass+"@"+database_
 
 azurepipeline=surf_azure(db_string)
 
+## Download all targeted files from the NCSBE Server
 def download_files(theurl, thedir, fnamer):
     if not os.path.isdir(thedir):
         os.makedirs(thedir)
@@ -47,7 +48,6 @@ def download_files(theurl, thedir, fnamer):
 month=11
 day=0
 old_years=[2004,2006]
-# years=[2010,2012, 2014, 2016]
 years=[2010, 2012, 2014, 2016]
 cal=Calendar(0)
 folder_urls=[]
